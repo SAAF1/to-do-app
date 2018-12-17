@@ -3,11 +3,14 @@ function onReady() {
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
 
-  addToDoForm.addEventListenter('submit', () event => {
+  addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
 
     //get the text
     let title = newToDoText.value;
+
+    //create a new li
+    let newLi = document.createElement('li');
 
     //create a new input
     let checkbox = document.createElement('input');
@@ -28,6 +31,6 @@ function onReady() {
     newToDoText.value = '';
   });
 }
-windows.onload = function() {
+window.onload = function() {
   onReady();
 };
