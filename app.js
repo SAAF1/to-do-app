@@ -2,7 +2,7 @@ function onReady() {
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
-  var   removeList = document.getElementById('delete')
+  var   removeList = document.getElementById('delete');
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
 
@@ -31,21 +31,21 @@ function onReady() {
     newToDoText.value = '';
   });
 
-  removeList.addEventListener('submit'. event => {
+  removeList.addEventListener('reset', event => {
     event.preventDefault();
 
     //get text
     let title = newRemoveText.value;
 
     //create new input
-    let checkbox = document.createElement('input');
+    // let checkbox = document.createElement('input');
 
     //set input's type to checkbox
-    checkbox.type = 'checkbox';
+    // checkbox.type = 'checkbox';
 
     //to remove from Checklist
-    let throwawayNode = toDoList.removeChild('title')
-  })
+    let throwawayNode = toDoList.removeChild('title');
+  });
 }
 window.onload = function() {
   onReady();
