@@ -31,21 +31,35 @@ function onReady() {
     newToDoText.value = '';
   });
 
-  removeList.addEventListener('reset', event => {
-    event.preventDefault();
+  let minusBtn.createElement('button');
+  minusBtn.innerHTML = <span>Delete</span>;
+  minusBtn.addEventListener('click', () => {
 
-    //get text
-    let title = newRemoveText.value;
+});
 
-    //create new input
-    // let checkbox = document.createElement('input');
-
-    //set input's type to checkbox
-    // checkbox.type = 'checkbox';
-
-    //to remove from Checklist
-    let throwawayNode = toDoList.removeChild('title');
-  });
+//   removeList.addEventListener('minusBtn', event => {
+//     event.preventDefault();
+//
+//     let minusBtn.createElement('button');
+//     minusBtn.innerHTML =
+//     minusBtn.addEventListener('click', () => {
+//
+// });
+//
+//     let temp.innerHTML
+//     //get text
+//     let title = newRemoveText.value;
+//
+//     //create new input
+//     let checkbox = document.createElement('input');
+//
+//     //set input's type to checkbox
+//      checkbox.type = 'checkbox';
+//
+//
+//     //to remove from Checklist
+//     let throwawayNode = toDoList.removeChild('title');
+//   });
 }
 window.onload = function() {
   onReady();
