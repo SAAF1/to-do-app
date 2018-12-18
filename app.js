@@ -20,7 +20,7 @@ function onReady() {
 
     let minusBtn = document.createElement('button');
   //  let minusBtn.createElement('button');
-    minusBtn.innerHTML = <span>Delete</span>;
+    minusBtn.innerHTML = "<span>Delete</span>";
 
     //set the title
     newLi.textContent = title;
@@ -37,7 +37,7 @@ function onReady() {
     newToDoText.value = '';
 
 
-     minusBtn.addEventListener('click', function() => {
+     minusBtn.addEventListener('click', function() {
        newLi.parentNode.removeChild(newLi)
      });
 
