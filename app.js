@@ -18,7 +18,8 @@ function onReady() {
     //set the input's type to checkbox
     checkbox.type = "checkbox";
 
-    let minusBtn.createElement('button');
+    let minusBtn = document.createElement('button');
+  //  let minusBtn.createElement('button');
     minusBtn.innerHTML = <span>Delete</span>;
 
     //set the title
