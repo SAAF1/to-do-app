@@ -29,13 +29,19 @@ function onReady() {
 
     //empty the input
     newToDoText.value = '';
+
+      let minusBtn.createElement('button');
+      minusBtn.innerHTML = <span>Delete</span>;
+      minusBtn.addEventListener('click', () => {
+
+      });
   });
 
-  let minusBtn.createElement('button');
-  minusBtn.innerHTML = <span>Delete</span>;
-  minusBtn.addEventListener('click', () => {
-
-});
+//   let minusBtn.createElement('button');
+//   minusBtn.innerHTML = <span>Delete</span>;
+//   minusBtn.addEventListener('click', () => {
+//
+// });
 
 //   removeList.addEventListener('minusBtn', event => {
 //     event.preventDefault();
