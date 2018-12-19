@@ -1,6 +1,14 @@
 function onReady() {
-  const toDos = [];
+  let id = 0;
+  let toDos = [];
   const addToDoForm = document.getElementById('addToDoForm');
+
+  //new code from revision
+  function deleteToDo(id){
+    return toDos.filter(function(toDos) {
+      return toDos !== id
+    });
+}
 
 //the newToDoText is the variable the getElementById saves the HTML info to?
   function createNewToDo() {
@@ -10,10 +18,11 @@ function onReady() {
     toDos.push({
       //Note to self: the ":" means its an object literal
       title: newToDoText.value,
-      complete: false
+      complete: false,
+      id: id
     });
     newToDoText.value = '';
-
+    id++;
     renderTheUI();
   }
 
@@ -31,7 +40,18 @@ function onReady() {
 
       toDoList.appendChild(newLi);
       newLi.appendChild(checkbox);
+
+      //my attempt at code starts from here until end of renderTheUI
+      let minusBtn = document.createElement('button');
+      minusBtn.innerHTML = "Delete";
+      document.newLi.appendChild(minusBtn);
+
+      minusBtn.addEventListener('click', function() {
+        toDos = deleteToDo(toDo.id);
+        renderTheUI();
+      })
     });
+
   }
 // note:  => {code here} is the same as function() {code here} and the 'submit' is just
 // the event (type of function) and brackets following it are the code inside the submit event function
