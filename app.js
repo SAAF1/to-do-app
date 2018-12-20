@@ -5,9 +5,10 @@ function onReady() {
 
   //new code from revision
   function deleteToDo(id){
-    return toDos.filter(function(toDos) {
+     toDos.filter(function(toDos) {
       return toDos !== id
     });
+    renderTheUI;
 }
 
 //the newToDoText is the variable the getElementById saves the HTML info to?
@@ -36,15 +37,32 @@ function onReady() {
       const checkbox = document.createElement('input');
       checkbox.type = "checkbox";
 
+//copied from To-Do2 47:36
+  const DELETE_BTN = document. createElement('button');
+  DELETE_BTN.textContent = 'Delete!';
+
+  
+  DELETE_BTN.addEventListener('click', event =>{
+    toDos = toDos.filter(function(item){
+      return item.id !== toDo.id;
+    })
+    renderTheUI();
+  });
+
+
+
       newLi.textContent = toDo.title;
 
       toDoList.appendChild(newLi);
       newLi.appendChild(checkbox);
+      //More Code from video 50:30 in.
+      newLi.appendChild(DELETE_BTN);
 
       //my attempt at code starts from here until end of renderTheUI
-      let minusBtn = document.createElement('button');
-      minusBtn.innerHTML = "Delete";
-      document.newLi.appendChild(minusBtn);
+      // let minusBtn = document.createElement('button');
+      // minusBtn.textContent = "Delete";
+      // minusBtn.innerHTML = "Delete";
+      // document.newLi.appendChild(minusBtn);
 
       minusBtn.addEventListener('click', function() {
         toDos = deleteToDo(toDo.id);
